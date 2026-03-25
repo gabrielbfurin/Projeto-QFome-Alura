@@ -6,11 +6,11 @@ import os
 
 def cadastro(restaurantes):
     os.system("cls" if os.name == "nt" else "clear")
-
     print("=== Cadastro de Restaurante === \n")
+
     nome_do_restaurante = input("Digite o nome do restaurante: ")
     restaurantes.append(nome_do_restaurante)
     
     print(f"Restaurante '{nome_do_restaurante}' cadastrado com sucesso! \n")
-    input("Pressione Enter para continuar...")
+    input("\nPressione Enter para continuar...")
 
