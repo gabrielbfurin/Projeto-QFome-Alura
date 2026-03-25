@@ -2,11 +2,12 @@
 Ela é responsável por cadastrar um novo restaurante, solicitando ao
 usuário algumas informações necessárias para o cadastro.'''
 
-import os
+from utils.limpar_terminal import limpar_terminal
+from utils.subtitulo import subtitulo
 
-def cadastro(restaurantes):
-    os.system("cls" if os.name == "nt" else "clear")
-    print("=== Cadastro de Restaurante === \n")
+def cadastro_restaurantes(restaurantes):
+    limpar_terminal()
+    subtitulo("Cadastro de Restaurantes")
 
     nome_do_restaurante = input("Digite o nome do restaurante: ")
     restaurantes.append(nome_do_restaurante)

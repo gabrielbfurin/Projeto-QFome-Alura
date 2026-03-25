@@ -1,11 +1,13 @@
 '''Essa função é chamada quando o usuário digita a opção 2 do menu.
 Ela é responsável por listar todos os restaurantes cadastrados.'''
 
-import os
+from utils.limpar_terminal import limpar_terminal
+from utils.subtitulo import subtitulo
 
-def listar_restaurantes(restaurantes):
-    os.system("cls" if os.name == "nt" else "clear")
-    print("=== Lista de Restaurantes Cadastrados === \n")
+
+def listagem_restaurantes(restaurantes):
+    limpar_terminal()
+    subtitulo("Lista de Restaurantes Cadastrados")
 
     for restaurante in restaurantes:
         print(f"- {restaurante}")
