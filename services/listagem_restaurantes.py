@@ -10,6 +10,9 @@ def listagem_restaurantes(restaurantes):
     subtitulo("Lista de Restaurantes Cadastrados")
 
     for restaurante in restaurantes:
-        print(f"- {restaurante}")
+        nome_restaurante = restaurante["nome"]
+        categoria_restaurante = restaurante["categoria"]
+        ativo = "Ativo" if restaurante["ativo"] else "Inativo"
+        print(f"- {nome_restaurante} | {categoria_restaurante} | {ativo}")
 
     input("\n Pressione Enter para continuar...")

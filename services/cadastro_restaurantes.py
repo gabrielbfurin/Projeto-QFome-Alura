@@ -10,7 +10,10 @@ def cadastro_restaurantes(restaurantes):
     subtitulo("Cadastro de Restaurantes")
 
     nome_do_restaurante = input("Digite o nome do restaurante: ")
-    restaurantes.append(nome_do_restaurante)
+    categoria_do_restaurante = input(f"Digite a categoria do {nome_do_restaurante}: ")
+    
+    dados_do_restaurante = {"nome": nome_do_restaurante, "categoria": categoria_do_restaurante, "ativo": False} # Cria um dicionário com as informações do restaurante a ser cadastrado.
+    restaurantes.append(dados_do_restaurante) # Adiciona o dicionário criado à lista de restaurantes cadastrados.
     
     print(f"Restaurante '{nome_do_restaurante}' cadastrado com sucesso! \n")
     input("\nPressione Enter para continuar...")
