@@ -5,7 +5,7 @@ usuário algumas informações necessárias para o cadastro.'''
 from utils.limpar_terminal import limpar_terminal
 from utils.subtitulo import subtitulo
 
-def cadastro_restaurantes(restaurantes):
+def cadastrar_restaurantes(restaurantes):
     limpar_terminal()
     subtitulo("Cadastro de Restaurantes")
 

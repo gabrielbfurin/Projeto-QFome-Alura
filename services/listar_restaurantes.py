@@ -5,7 +5,7 @@ from utils.limpar_terminal import limpar_terminal
 from utils.subtitulo import subtitulo
 
 
-def listagem_restaurantes(restaurantes):
+def listar_restaurantes(restaurantes):
     limpar_terminal()
     subtitulo("Lista de Restaurantes Cadastrados")
 
