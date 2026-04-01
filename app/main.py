@@ -1,10 +1,12 @@
+'''Essa função é o ponto de partida do programa. Ela é responsável por exibir o menu principal,
+receber a opção escolhida pelo usuário e chamar a função correspondente para executar a ação desejada.'''
+
 import time
 
 from ui.menu import menu
 from utils.opcao_invalida import opcao_invalida
 from utils.limpar_terminal import limpar_terminal
 from utils.opcoes import escolher_opcao
-
 
 def main():
     restaurantes = [] # Lista para armazenar os restaurantes cadastrados - Vai ser usada na função cadastro()

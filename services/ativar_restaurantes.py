@@ -1,3 +1,7 @@
+'''Essa função é responsável por ativar ou desativar o restaurante desejado pelo usuário.
+Ela recebe a lista de restaurantes cadastrados, solicita ao usuário o nome do restaurante para que
+seja ativado ou desativado, e então percorre a lista de restaurantes para encontrar o restaurante correspondente.'''
+
 from utils.subtitulo import subtitulo
 from utils.limpar_terminal import limpar_terminal
 
