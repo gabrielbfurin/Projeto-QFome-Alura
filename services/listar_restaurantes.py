@@ -9,6 +9,11 @@ def listar_restaurantes(restaurantes):
     limpar_terminal()
     subtitulo("Lista de Restaurantes Cadastrados")
 
+    if not restaurantes: # Verifica se a lista de restaurantes está vazia. Se estiver, exibe uma mensagem informando que não há restaurantes cadastrados e retorna para o menu principal.
+        print("Nenhum restaurante cadastrado!\n")
+        input("Pressione Enter para continuar...")
+        return
+
     print(f"{'Nome do Restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | {'Status'}")
     print("-" * 60)
 

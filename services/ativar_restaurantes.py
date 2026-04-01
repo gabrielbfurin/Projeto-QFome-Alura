@@ -13,7 +13,7 @@ def ativar_restaurantes(restaurantes):
     procurar_restaurante = False
 
     for restaurante in restaurantes:
-        if nome_restaurante == restaurante["nome"]:
+        if nome_restaurante.strip().lower() == restaurante["nome"].strip().lower(): # Compara o nome do restaurante digitado pelo usuário com o nome do restaurante na lista, ignorando espaços em branco e diferenças de maiúsculas/minúsculas.
             procurar_restaurante = True
             restaurante["ativo"] = not restaurante["ativo"] # Inverte o valor do campo "ativo" do restaurante encontrado (se for True, passa a ser False, e vice-versa).
 
