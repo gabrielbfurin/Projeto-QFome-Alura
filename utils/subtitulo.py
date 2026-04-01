@@ -3,4 +3,4 @@ garantindo uma melhor organização e clareza para o usuário, facilitando a nav
  e compreensão das funcionalidades disponíveis.'''
 
 def subtitulo(texto):
-    print(f"=== {texto} === \n")
+    print(f"===== {texto} ===== \n")
