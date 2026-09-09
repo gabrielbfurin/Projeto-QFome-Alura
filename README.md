@@ -1,90 +1,136 @@
-# QFome - Sistema de Gerenciamento de Restaurantes
+# QFome — Sistema de Gerenciamento de Restaurantes
 
-Sistema de gerenciamento de restaurantes via terminal, desenvolvido em Python durante o curso "Python crie a sua primeira aplicação", da Alura. O projeto tem como foco a prática de lógica de programação, organização de código, modularização e aplicação de boas práticas de desenvolvimento.
+Aplicação de terminal desenvolvida em **Python** para cadastro e gerenciamento de restaurantes.
 
-## Preview
-
-### Menu do sistema:
-
-<img width="797" height="457" alt="image" src="https://github.com/user-attachments/assets/e1376f28-2381-4c0c-a1bf-127352ea9fb2" />
-
-### Listagem dos restaurantes:
-
-<img width="573" height="207" alt="image" src="https://github.com/user-attachments/assets/247458f9-e5ec-4f09-b9d1-e7ca1de5cb19" />
-
-### Ativação dos restaurantes:
-
-<img width="673" height="133" alt="image" src="https://github.com/user-attachments/assets/1b675bac-5441-469b-b55d-1ce792589298" />
-
-### Rodando o sistema:
-
-[Assita ao sitema em execução](https://1drv.ms/v/c/e02e5abde513647c/IQB936BfrNrrR5srX__UYfWkASibDpnr9si4LeG3z8rFsR8?e=pdEjMJ)
+O projeto foi criado durante o curso **Python: crie a sua primeira aplicação**, da Alura, e posteriormente organizado em múltiplos módulos para praticar lógica de programação, separação de responsabilidades e estruturação de projetos Python.
 
 ## Funcionalidades
 
 - Cadastro de restaurantes
-- Listagem de restaurantes
+- Listagem dos restaurantes cadastrados
 - Ativação e desativação de restaurantes
-- Validação de entradas do usuário
-- Interface organizada no terminal
+- Validação de opções inseridas pelo usuário
+- Verificação de restaurantes duplicados
+- Interface organizada pelo terminal
+
+## Estrutura do projeto
+
+```text
+Projeto-QFome-Alura/
+├── app/
+│   ├── __init__.py
+│   └── main.py
+│
+├── services/
+│   ├── __init__.py
+│   ├── ativar_restaurantes.py
+│   ├── cadastrar_restaurantes.py
+│   └── listar_restaurantes.py
+│
+├── ui/
+│   ├── __init__.py
+│   └── menu.py
+│
+├── utils/
+│   ├── __init__.py
+│   ├── limpar_terminal.py
+│   ├── opcao_invalida.py
+│   ├── opcoes.py
+│   └── subtitulo.py
+│
+└── README.md
+```
+
+A aplicação foi dividida em módulos responsáveis pela interface, regras relacionadas aos restaurantes, funções auxiliares e inicialização do sistema.
+
+## Demonstração
+
+### Menu principal
+
+<img width="797" height="457" alt="image" src="https://github.com/user-attachments/assets/e1376f28-2381-4c0c-a1bf-127352ea9fb2" />
+
+O sistema apresenta um menu interativo pelo terminal com as opções disponíveis para o usuário.
+
+### Fluxo da aplicação
+
+<img width="573" height="207" alt="image" src="https://github.com/user-attachments/assets/247458f9-e5ec-4f09-b9d1-e7ca1de5cb19" />
+
+<img width="673" height="133" alt="image" src="https://github.com/user-attachments/assets/1b675bac-5441-469b-b55d-1ce792589298" />
+
+É possível cadastrar restaurantes, visualizar os registros existentes e alterar o status de cada restaurante entre ativo e inativo.
+
+**[Assista ao sistema em execução](https://1drv.ms/v/c/e02e5abde513647c/IQB936BfrNrrR5srX__UYfWkASibDpnr9si4LeG3z8rFsR8?e=pdEjMJ)**
 
 ## Tecnologias utilizadas
 
 - Python
+- Git
+- GitHub
 - VS Code
 
-## Como executar o projeto
+O projeto utiliza apenas recursos da biblioteca padrão do Python e não possui dependências externas.
 
-### 1. Pré-Requisitos:
-Antes de executar o projeto, tenha certeza de que sua máquina atende os seguintes requisitos:
+## Como executar
 
-- Python 3.10 ou superior
+### 1. Pré-requisitos
 
-Para verificar a instalacão do Python, utilize o comando abaixo em qualquer terminal:
+Tenha o **Python 3.10 ou superior** instalado.
+
+Para verificar:
+
 ```bash
 python --version
 ```
 
-- Um terminal (CMD, PowerShell, Git Bash ou terminal do VS Code)
-- Sistema operacional Windows, Linux ou macOS
-
 ### 2. Clone o repositório
 
-Abra o Git Bash, CMD, Terminal do VS Code ou outro terminal de sua preferência, e utilize o seguinte comando:
 ```bash
 git clone https://github.com/gabrielbfurin/Projeto-QFome-Alura.git
 ```
 
-### 3. Acesse a pasta do projeto:
+### 3. Entre na pasta
+
 ```bash
 cd Projeto-QFome-Alura
 ```
 
-### 4. Execute o projeto:
+### 4. Execute a aplicação
+
+```bash
+python -m app.main
+```
+
+No Windows, também é possível utilizar:
+
 ```bash
 py -m app.main
 ```
 
-Dica: Se estiver utilizando o VS Code, você pode executar o projeto diretamente pela aba **Run and Debug**, sem a necessidade de utilizar comandos no terminal.
+Se estiver utilizando o VS Code, o projeto também possui uma configuração de **Run and Debug** para executar a aplicação diretamente pelo editor.
 
 ## Aprendizados
 
-- Estruturação de projetos em múltiplos arquivos
-- Modularização com pacotes Python
-- Uso de funções e subalgoritmos
-- Manipulação de listas e dicionários
-- Tratamento de erros com try/except
-- Organização de código seguindo boas práticas
+Durante o desenvolvimento deste projeto, pratiquei principalmente:
 
-## Possíveis Melhorias
+- organização de um projeto em múltiplos arquivos;
+- modularização com pacotes Python;
+- criação e reutilização de funções;
+- manipulação de listas e dicionários;
+- tratamento de erros com `try/except`;
+- validação de entradas;
+- separação de responsabilidades entre diferentes módulos;
+- uso de Git e GitHub para versionamento.
 
-- Persistência de dados com JSON
-- Interface gráfica
-- Transformação em API
-- Sistema de busca por restaurante
+## Possíveis evoluções
+
+Algumas funcionalidades que poderiam ser adicionadas em versões futuras:
+
+- persistência dos restaurantes em arquivo;
+- busca por restaurante;
+- edição e exclusão de registros;
+- testes automatizados;
+- exposição das funcionalidades através de uma API.
 
 ## Autor
 
-Desenvolvido por Gabriel B. Furin
-
-⭐ Se você gostou do projeto, considere deixar uma estrela no repositório!
+Desenvolvido por **Gabriel Furin**.
