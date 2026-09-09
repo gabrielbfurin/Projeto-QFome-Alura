@@ -1,4 +1,4 @@
-'''Essa função é responsável por limpar o terminar,
+'''Essa função é responsável por limpar o terminal,
 garantindo uma melhor experiência para o usuário, 
 evitando que a tela fique poluída com informações antigas.'''
 
